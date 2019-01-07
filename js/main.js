@@ -36,7 +36,7 @@ class Friend {
 function buildFriendsList() {
     fetch(`https://randomuser.me/api/?results=50`)
         .then(data => data.json())
-        .then((friendsData) => friendsList = friendsData.results.map(buildFriend))
+        .then(friendsData => friendsList = friendsData.results.map(buildFriend))
         .then(() => renderHTMLFriendsCards(friendsList));
 
     function buildFriend(friend) {
